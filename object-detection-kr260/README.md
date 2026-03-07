@@ -61,7 +61,36 @@ password: ubuntu
 
 ---
 
-# Step 2 — Install PYNQ and Vitis AI Runtime
+# Step 2 — Update Base System
+
+After booting the KR260 for the first time, update the system repositories and install the required AMD/Xilinx package sources.
+
+Run the following commands:
+
+```id="a2sys1"
+sudo add-apt-repository ppa:xilinx-apps --yes &&
+sudo add-apt-repository ppa:ubuntu-xilinx/default --yes &&
+sudo add-apt-repository ppa:xilinx-apps/xilinx-drivers --yes &&
+sudo add-apt-repository ppa:lely/ppa --yes &&
+sudo apt update --yes &&
+sudo apt upgrade --yes
+```
+
+This step installs and updates the required package repositories used by the Kria platform.
+
+These repositories provide:
+
+* Xilinx platform applications
+* Kria-specific drivers
+* updated hardware support packages
+* additional system dependencies required by PYNQ and Vitis AI
+
+This process may take several minutes depending on your internet connection.
+
+After the update finishes, continue to the next step to install the AI runtime environment.
+
+
+# Step 3 — Install PYNQ and Vitis AI Runtime
 
 Create the installation script:
 
@@ -87,7 +116,7 @@ Installation typically takes **20–30 minutes**.
 
 ---
 
-# Step 3 — Verify DPU Installation
+# Step 4 — Verify DPU Installation
 
 After installation, reboot the board.
 
@@ -101,7 +130,7 @@ If successful, information about the DPU architecture will be displayed.
 
 ---
 
-# Step 4 — Test the Webcam
+# Step 5 — Test the Webcam
 
 Before running AI inference, verify the webcam works.
 
@@ -117,7 +146,7 @@ Press **q** to exit.
 
 ---
 
-# Step 5 — Run Real-Time Object Detection
+# Step 6 — Run Real-Time Object Detection
 
 Run the main object detection script:
 
@@ -140,7 +169,7 @@ Typical performance:
 
 ---
 
-# Step 6 — Vehicle Counting Example
+# Step 7 — Vehicle Counting Example
 
 This project also includes a **vehicle counting application**.
 
