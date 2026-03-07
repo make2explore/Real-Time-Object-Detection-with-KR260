@@ -16,7 +16,7 @@ Webcam → Frame Capture → Pre-processing → DPU Inference → Object Detecti
 
 * AMD Kria KR260 Robotics Starter Kit
 * USB webcam (Logitech C270 tested)
-* HDMI monitor
+* HDMI monitor (Optional), you can use [NoMachine Headless Remote Desktop Setup](https://github.com/make2explore/AMD-Kria-KR260-Robotics-Starter-Kit/tree/main/Installing-NoMachine)
 * USB keyboard and mouse
 * 32GB or larger microSD card
 
