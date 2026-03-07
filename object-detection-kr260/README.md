@@ -87,57 +87,91 @@ These repositories provide:
 
 The upgrade process may take several minutes depending on network speed.
 
-Once the system update finishes, continue with the next step to install the AI runtime environment.
-
+Once the system update finishes, continue with the next step to install the AI runtime environment.  
 
 
 # Step 3 — Install PYNQ and Vitis AI Runtime
 
-Create the installation script:
+Clone this repository to the KR260 system.
 
-```
-scripts/install_ai_stack.sh
+```bash
+git clone https://github.com/make2explore/Real-Time-Object-Detection-with-KR260
 ```
 
-Run the installation:
+Navigate to the project directory:
 
+```bash
+cd Real-Time-Object-Detection-with-KR260
 ```
-chmod +x scripts/install_ai_stack.sh
-sudo ./scripts/install_ai_stack.sh
+
+Navigate to the scripts folder:
+
+```bash
+cd scripts
+```
+
+Run the installation script:
+
+```bash
+chmod +x install_ai_stack.sh
+sudo ./install_ai_stack.sh
 ```
 
 The script installs:
 
 * PYNQ framework
-* Vitis AI Runtime
+* Vitis AI Runtime 3.5
 * DPU-PYNQ interface
-* Example notebooks
+* runtime patches required for KR260
 
-Installation typically takes **20–30 minutes**.
+Installation typically takes **20–30 minutes** depending on network speed.
 
 ---
 
-# Step 4 — Verify DPU Installation
+# Verify Installation
 
-After installation, reboot the board.
+Activate the PYNQ environment:
+
+```bash
+source /etc/profile.d/pynq_venv.sh
+```
+
+Verify PYNQ installation:
+
+```bash
+python3 -c "import pynq; print('PYNQ installed successfully')"
+```
 
 Check the DPU runtime:
 
-```
+```bash
 xdputil query
 ```
 
-If successful, information about the DPU architecture will be displayed.
+Example output:
+
+```
+DPU Architecture: B4096
+```
+
+If this command displays DPU information, the installation is successful.
 
 ---
 
-# Step 5 — Test the Webcam
+# Step 4 — Test the Webcam
 
-Before running AI inference, verify the webcam works.
+Before running AI inference, verify that the webcam works.
 
-Run:
+Navigate to the project folder:
 
+```bash
+cd ..
+cd Real-Time-Object-Detection-with-KR260/object-detection-kr260/examples
 ```
+
+Run the webcam test script:
+
+```bash
 python3 examples/usb-camera-test-opencv.py
 ```
 
@@ -147,11 +181,17 @@ Press **q** to exit.
 
 ---
 
-# Step 6 — Run Real-Time Object Detection
+# Step 5 — Run Real-Time Object Detection
 
-Run the main object detection script:
+Activate the PYNQ environment if it is not already active:
 
+```bash
+source /etc/profile.d/pynq_venv.sh
 ```
+
+Run the object detection script:
+
+```bash
 python3 examples/Kria-KR260-ObjDet.py
 ```
 
@@ -170,17 +210,17 @@ Typical performance:
 
 ---
 
-# Step 7 — Vehicle Counting Example
+# Step 6 — Vehicle Counting Example
 
-This project also includes a **vehicle counting application**.
+This repository also includes a **vehicle counting application**.
 
 Run:
 
-```
+```bash
 python3 examples/vehicle_counter.py
 ```
 
-Input video:
+Input video file:
 
 ```
 media/highway.mp4
@@ -191,7 +231,7 @@ The script performs:
 * vehicle detection
 * object tracking
 * counting vehicles crossing a line
-* real-time FPS display
+* displaying FPS and vehicle count
 
 Vehicle classes counted:
 
@@ -232,7 +272,7 @@ object-detection-kr260
 
 # Important Note
 
-This implementation uses **OpenCV camera capture instead of GStreamer pipelines** for improved compatibility with standard OpenCV installations.
+This implementation uses **OpenCV camera capture instead of GStreamer pipelines** to improve compatibility with standard OpenCV installations.
 
 ---
 
@@ -242,7 +282,7 @@ This implementation uses **OpenCV camera capture instead of GStreamer pipelines*
 
 Check which process is using the camera:
 
-```
+```bash
 sudo lsof /dev/video0
 ```
 
@@ -252,17 +292,13 @@ Kill the process if necessary.
 
 # Performance
 
-Typical performance observed:
+Typical observed performance:
 
-```
 YOLOX Nano + DPU
-≈ 12–17 FPS
-```
+≈ **12–17 FPS**
 
 Performance may vary depending on:
 
 * camera resolution
 * system load
 * model configuration
-
----
