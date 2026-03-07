@@ -29,9 +29,12 @@ from matplotlib import pyplot as plt
 # ***********************************************************************
 # input file names
 # ***********************************************************************
-dpu_model   = os.path.abspath("dpu.bit")
-cnn_xmodel  = os.path.join("./"        , "yolox_nano_pt.xmodel")
-labels_file = os.path.join("./img"     , "coco2017_classes.txt")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.abspath(os.path.join(BASE_DIR, ".."))
+
+MODEL_PATH = os.path.join(PROJECT_DIR, "models", "yolox_nano_pt.xmodel")
+OVERLAY_PATH = os.path.join(PROJECT_DIR, "overlays", "dpu", "dpu.bit")
+LABELS_PATH = os.path.join(PROJECT_DIR, "labels", "coco2017_classes.txt")
 
 # ***********************************************************************
 # Prepare the Overlay and load the "cnn.xmodel"
@@ -40,9 +43,12 @@ from pynq_dpu import DpuOverlay
 from pynq import Overlay
 from pynq.lib import AxiGPIO
 
-overlay = DpuOverlay("/home/ubuntu/project/Kria-Object-Detection/src/usb-camera/dpu.bit")
-overlay.load_model(cnn_xmodel)
+print("Loading DPU overlay...")
+overlay = DpuOverlay(OVERLAY_PATH)
+overlay.load_model(MODEL_PATH)
 ol = overlay
+
+dpu = overlay.runner
 
 # ***********************************************************************
 # Utility Functions
@@ -248,7 +254,7 @@ def get_class(classes_path):
     class_names = [c.strip() for c in class_names]
     return class_names
     
-class_names = get_class(labels_file)
+class_names = get_class(LABELS_PATH)
 num_classes = len(class_names)
 
 

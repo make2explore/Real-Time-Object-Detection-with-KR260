@@ -14,6 +14,7 @@
 print("KR260 Vehicle Counter")
 print(" ")
 
+import os
 import cv2
 import time
 import numpy as np
@@ -23,8 +24,14 @@ from pynq_dpu import DpuOverlay
 # ==========================================================
 # Load DPU Overlay + Model
 # ==========================================================
-overlay = DpuOverlay("dpu.bit")
-overlay.load_model("yolox_nano_pt.xmodel")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.abspath(os.path.join(BASE_DIR, ".."))
+
+OVERLAY_PATH = os.path.join(PROJECT_DIR, "overlays", "dpu", "dpu.bit")
+MODEL_PATH = os.path.join(PROJECT_DIR, "models", "yolox_nano_pt.xmodel")
+
+overlay = DpuOverlay(OVERLAY_PATH)
+overlay.load_model(MODEL_PATH)
 dpu = overlay.runner
 
 inputTensors = dpu.get_input_tensors()
@@ -231,9 +238,9 @@ class CentroidTracker:
 # MAIN
 # ==========================================================
 vehicle_classes = [2, 3, 5, 7]
-video_path = "highway.mp4"
+VIDEO_PATH = os.path.join(PROJECT_DIR, "media", "highway.mp4")
 
-cap = cv2.VideoCapture(video_path)
+cap = cv2.VideoCapture(VIDEO_PATH)
 ct = CentroidTracker()
 
 totalCount = 0

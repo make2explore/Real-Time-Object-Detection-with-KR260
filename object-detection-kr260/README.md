@@ -145,16 +145,16 @@ python3 -c "import pynq; print('PYNQ installed successfully')"
 Check the DPU runtime:
 
 ```bash
-xdputil query
+python3 -c "import pynq_dpu; print('DPU runtime available')"
 ```
 
 Example output:
 
 ```
-DPU Architecture: B4096
+DPU runtime available
 ```
 
-If this command displays DPU information, the installation is successful.
+If this command displays DPU runtime available, the installation is successful.
 
 ---
 
@@ -165,14 +165,13 @@ Before running AI inference, verify that the webcam works.
 Navigate to the project folder:
 
 ```bash
-cd ..
 cd Real-Time-Object-Detection-with-KR260/object-detection-kr260/examples
 ```
 
 Run the webcam test script:
 
 ```bash
-python3 examples/usb-camera-test-opencv.py
+python3 usb-camera-test-opencv.py
 ```
 
 If successful, a window showing the webcam feed will appear.
@@ -192,7 +191,7 @@ source /etc/profile.d/pynq_venv.sh
 Run the object detection script:
 
 ```bash
-python3 examples/Kria-KR260-ObjDet.py
+sudo -E $(which python3) Kria-KR260-ObjDet.py
 ```
 
 The program will:
@@ -217,7 +216,7 @@ This repository also includes a **vehicle counting application**.
 Run:
 
 ```bash
-python3 examples/vehicle_counter.py
+sudo -E $(which python3) vehicle_counter.py
 ```
 
 Input video file:
