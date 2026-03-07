@@ -67,27 +67,28 @@ After booting the KR260 for the first time, update the system repositories and i
 
 Run the following commands:
 
-```id="a2sys1"
+```bash
 sudo add-apt-repository ppa:xilinx-apps --yes &&
 sudo add-apt-repository ppa:ubuntu-xilinx/default --yes &&
 sudo add-apt-repository ppa:xilinx-apps/xilinx-drivers --yes &&
 sudo add-apt-repository ppa:lely/ppa --yes &&
-sudo apt update --yes &&
-sudo apt upgrade --yes
+sudo apt update &&
+sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 ```
 
-This step installs and updates the required package repositories used by the Kria platform.
+This step installs and updates the required repositories used by the Kria platform.
 
 These repositories provide:
 
 * Xilinx platform applications
-* Kria-specific drivers
-* updated hardware support packages
-* additional system dependencies required by PYNQ and Vitis AI
+* Kria hardware drivers
+* updated platform packages
+* additional dependencies required for PYNQ and Vitis AI
 
-This process may take several minutes depending on your internet connection.
+The upgrade process may take several minutes depending on network speed.
 
-After the update finishes, continue to the next step to install the AI runtime environment.
+Once the system update finishes, continue with the next step to install the AI runtime environment.
+
 
 
 # Step 3 — Install PYNQ and Vitis AI Runtime
