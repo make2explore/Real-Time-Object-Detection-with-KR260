@@ -107,7 +107,7 @@ cd Real-Time-Object-Detection-with-KR260
 Navigate to the scripts folder:
 
 ```bash
-cd scripts
+cd object-detection-kr260/scripts
 ```
 
 Run the installation script:
