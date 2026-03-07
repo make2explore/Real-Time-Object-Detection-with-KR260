@@ -1,3 +1,15 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# ---------------------------------- make2explore.com -------------------------------------------------------#
+# Project           - Real-Time Object Detection on Kria KR260 using a Webcam
+# Created By        - info@make2explore.com
+# Last Modified     - 07/03/2026 17:36:00 @admin
+# Software          - Python, PYNQ Framework, Vitis AI Runtime 3.5, DPU-PYNQ Python, OpenCV, YOLOx
+# Hardware          - AMD Kria KR260 Robotics Starter Kit.     
+# Sensors Used      - External USB WebCam - Logitech C270
+# Source Repo       - github.com/make2explore
+# ===========================================================================================================#
+# USB Camera Test
 import cv2
 import numpy as np
 import time
