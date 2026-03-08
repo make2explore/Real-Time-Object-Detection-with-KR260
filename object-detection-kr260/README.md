@@ -87,7 +87,13 @@ The upgrade process may take several minutes depending on network speed.
 Once the system update finishes, continue with the next step to install the AI runtime environment.  
   
 > [!TIP]
-> Helpful advice for doing things better.
+> Helpful advice for doing things better.  
+  
+
+| **Card Title** |
+| :--- |
+| This is the content inside your "card." You can add text, images, or links here. |
+
 
 
 # Step 2 — Install PYNQ and Vitis AI Runtime
