@@ -4,12 +4,10 @@ This project demonstrates **hardware-accelerated real-time object detection usin
 
 The system uses a **USB webcam as input** and performs object detection using the **YOLOX Nano model running on the DPU accelerator**.
 
-Pipeline overview:
+Pipeline overview:  
 
-```
-Webcam → Frame Capture → Pre-processing → DPU Inference → Object Detection Output
-```
-
+<img src="/assets/m2e-KR260-Project-pipeline.png">    
+  
 ---
 
 # Hardware Requirements
