@@ -58,7 +58,7 @@ password: ubuntu
 
 ---
 
-# Step 2 — Update Base System
+## Update Base System
 
 After booting the KR260 for the first time, update the system repositories and install the required AMD/Xilinx package sources.
 
@@ -85,9 +85,12 @@ These repositories provide:
 The upgrade process may take several minutes depending on network speed.
 
 Once the system update finishes, continue with the next step to install the AI runtime environment.  
+  
+> [!TIP]
+> Helpful advice for doing things better.
 
 
-# Step 3 — Install PYNQ and Vitis AI Runtime
+# Step 2 — Install PYNQ and Vitis AI Runtime
 
 Clone this repository to the KR260 system.
 
@@ -155,7 +158,7 @@ If this command displays DPU runtime available, the installation is successful.
 
 ---
 
-# Step 4 — Test the Webcam
+# Step 3 — Test the Webcam
 
 Before running AI inference, verify that the webcam works.
 
@@ -177,7 +180,7 @@ Press **q** to exit.
 
 ---
 
-# Step 5 — Run Real-Time Object Detection
+# Step 4 — Run Real-Time Object Detection
 
 Activate the PYNQ environment if it is not already active:
 
@@ -206,7 +209,7 @@ Typical performance:
 
 ---
 
-# Step 6 — Vehicle Counting Example
+# Step 5 — Vehicle Counting Example
 
 This repository also includes a **vehicle counting application**.
 
