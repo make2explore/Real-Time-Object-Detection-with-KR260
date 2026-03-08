@@ -6,7 +6,7 @@ The system uses a **USB webcam as input** and performs object detection using th
 
 Pipeline overview:  
 
-<img src="/assets/m2e-KR260-Project-pipeline.png">    
+<img src="/assets/m2e-KR260-Project-pipeline.png" height="200">    
   
 ---
 
