@@ -87,12 +87,13 @@ The upgrade process may take several minutes depending on network speed.
 Once the system update finishes, continue with the next step to install the AI runtime environment.  
   
 > [!TIP]
-> Helpful advice for doing things better.  
+> You can refer our Getting Started Guide and YouTube Video to Setup Kria Board in Headless mode with NoMachine Remote Desktop
   
 
-| **Card Title** |
+| **AMD Kria™ KR260 Robotics Starter Kit User Guide** |
 | :--- |
-| This is the content inside your "card." You can add text, images, or links here. |
+| [Repository](https://github.com/make2explore/AMD-Kria-KR260-Robotics-Starter-Kit) |
+| [YouTube](https://youtu.be/) |
 
 
 
