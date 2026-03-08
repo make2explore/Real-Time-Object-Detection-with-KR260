@@ -4,15 +4,11 @@ This project demonstrates **hardware-accelerated real-time object detection usin
 
 The system uses a **USB webcam as input** and performs object detection using the **YOLOX Nano model running on the DPU accelerator**.
 
-Pipeline overview:   
+### Pipeline overview and Hardware + Software Stack  
 <p align="center">
 <img src="/assets/m2e-KR260-Project-pipeline.png" height="400"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="/assets/m2e-KR260-Project-System-Arch.png" height="400">
 </p>  
   
-Hardware + Software Stack
-
-You can add this below the diagram:
-
 # Hardware Requirements
 
 * AMD Kria KR260 Robotics Starter Kit
