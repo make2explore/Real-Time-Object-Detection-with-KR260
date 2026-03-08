@@ -6,8 +6,12 @@ The system uses a **USB webcam as input** and performs object detection using th
 
 Pipeline overview:   
 <p align="center">
-<img src="/assets/m2e-KR260-Project-pipeline.png" height="400">    
+<img src="/assets/m2e-KR260-Project-pipeline.png" height="400"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="/assets/m2e-KR260-Project-System-Arch.png" height="400">
 </p>  
+  
+Hardware + Software Stack
+
+You can add this below the diagram:
 
 # Hardware Requirements
 
