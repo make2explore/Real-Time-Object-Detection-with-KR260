@@ -6,8 +6,9 @@ The system uses a **USB webcam as input** and performs object detection using th
 
 Pipeline overview:   USB Webcam --> OpenCV Frame Capture --> Pre-Processing (Resize + Padding + Normalize) --> Vitis AI Runtime (VART) --> DPU Accelerator (YOLOX Nano Inference) --> Post-Processing (Decode + Bounding Boxes) --> Object Detection Output --> (Classes + Confidence) --> Application Layer (Real-time Visualization, Vehicle Counting, Traffic Analytics)  
 
+<p align="center">
 <img src="/assets/m2e-KR260-Project-pipeline.png" height="400">    
-  
+</p>  
 ---
 
 # Hardware Requirements
