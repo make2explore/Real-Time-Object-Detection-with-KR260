@@ -93,7 +93,7 @@ Once the system update finishes, continue with the next step to install the AI r
 | **AMD Kria™ KR260 Robotics Starter Kit User Guide** |
 | :--- |
 | [Repository](https://github.com/make2explore/AMD-Kria-KR260-Robotics-Starter-Kit) |
-| [YouTube](https://youtu.be/) |
+| [YouTube Video](https://youtu.be/) |
 
 
 
