@@ -84,9 +84,13 @@ Planned examples include:
 
 📕 **YouTube Video Links**  
 
+▶️ Real-Time Object Detection on the Kria KR260 using a Webcam  🔗  https://youtu.be/  
+  
 ▶️ KR260 Robotics Starter Kit Unboxing - ROS 2 + FPGA Power 🔗  https://youtu.be/dSLpAk4iOcQ  
 
-▶️ Real-Time Object Detection on the Kria KR260 using a Webcam  🔗  https://youtu.be/  
+▶️ KR260 Robotics Starter Kit Headless Setup 🔗  https://youtu.be/S-gdlXVWeXY  
+  
+▶️ AMD Kria KR260 : ROS2, FPGA Hardware Acceleration #ai #edgeai #ros2 🔗 https://youtube.com/shorts/HO7OIZ3Ha8A  
 
 -------------------------------------------------------------------------------------------------------
 📒 **Important Links**  
