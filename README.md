@@ -84,7 +84,7 @@ Planned examples include:
 
 📕 **YouTube Video Links**  
 
-▶️ Real-Time Object Detection on the Kria KR260 using a Webcam  🔗  https://youtu.be/  
+▶️ AMD KR260 Real-Time Object Detection: Vision AI | FPGA | Hardware Acceleration  🔗  https://youtu.be/  
   
 ▶️ KR260 Robotics Starter Kit Unboxing - ROS 2 + FPGA Power 🔗  https://youtu.be/dSLpAk4iOcQ  
 
