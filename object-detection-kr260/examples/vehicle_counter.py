@@ -9,7 +9,7 @@
 # Sensors Used      - External USB WebCam - Logitech C270
 # Source Repo       - github.com/make2explore
 # ===========================================================================================================#
-# Vehicle Counter Code
+# Vehicle Counter OpenCV Code
 
 print("KR260 Vehicle Counter")
 print(" ")
