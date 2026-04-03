@@ -84,7 +84,7 @@ Planned examples include:
 
 📕 **YouTube Video Links**  
 
-▶️ AMD KR260 Real-Time Object Detection: Vision AI | FPGA | Hardware Acceleration  🔗  https://youtu.be/  
+▶️ AMD KR260 Real-Time Object Detection: Vision AI | FPGA | Hardware Acceleration  🔗  https://youtu.be/4EN45H3MyEY    
   
 ▶️ KR260 Robotics Starter Kit Unboxing - ROS 2 + FPGA Power 🔗  https://youtu.be/dSLpAk4iOcQ  
 
